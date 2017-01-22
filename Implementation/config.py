@@ -1,0 +1,5 @@
+import os
+SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:dmuk@localhost/cmpproject'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+WTF_CSRF_ENABLED = True
+SECRET_KEY = '492CC66D6C91CD57682CA6AAF72D2' #256-bit WEP Key

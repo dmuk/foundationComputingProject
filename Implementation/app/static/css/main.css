@@ -1,0 +1,543 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+h1, h2, .site-title {
+  font-family: "Oxygen", sans-serif;
+  color: #004c67;
+}
+
+h1, .site-title {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2c3e50;
+  margin: 10px 0;
+  line-height: 1.7;
+}
+
+.site-title {
+  align-self: center;
+  font-weight: 400;
+  padding: 5px 20px;
+  margin: 0 20px;
+  border-left: 1px solid #004c67;
+}
+
+.topic-title {
+  font-weight: 200;
+  color: #ecf0f1;
+  padding: 20px;
+  width: 500px;
+}
+
+.topic-heading {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border: 1px solid #004c67;
+}
+
+.flash-message {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #004c67;
+  margin: 10px 0;
+}
+
+.form-errors {
+  font-size: 10px;
+  color: #c0392b;
+  margin: 5px;
+  line-height: 1;
+  text-align: left;
+}
+
+.form-errors::before {
+  content: '*';
+}
+
+*, *:before, *::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+html {
+  width: 100.01%;
+}
+
+body {
+  font-size: 62.5%;
+  background-image: url("../img/whitediamond.png");
+  background-repeat: repeat;
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+  min-height: 100vh;
+}
+
+.container, .wrapper {
+  margin: 0 auto;
+  width: 960px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  height: 0;
+}
+
+i {
+  margin-right: 10px;
+}
+
+/**************************
+  DEBUG/UTILITY */
+/**************************/
+.width100 {
+  width: 100%;
+}
+
+.width75 {
+  width: 75%;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+/**************************
+  TO SORT */
+/**************************/
+.logic-gate-showcase {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.gate-info {
+  padding: 10px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+.logic-gate-img {
+  width: 100px;
+}
+
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 20%;
+}
+
+.btn {
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  background-color: #004c67;
+  color: #ecf0f1;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 10px 10px 10px 0;
+  border: 1px solid #2c3e50;
+  width: 80px;
+  transition-duration: .2s;
+  transition-property: background-color, scale;
+}
+
+.btn:hover {
+  background-color: #00729a;
+  transform: scale(1.05);
+}
+
+.topic-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.topic-grid .topic:nth-child(even) {
+  margin-left: auto;
+}
+
+.topic {
+  position: relative;
+  background-color: #004c67;
+  margin: 20px 0;
+  width: 48%;
+  height: 200px;
+}
+
+.topic-header {
+  background-color: #004c67;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login, .sign-up {
+  background-color: #ecf0f1;
+  margin: 20px auto;
+  text-align: center;
+  width: 320px;
+}
+
+#login-form, #sign-up-form {
+  padding: 20px;
+}
+
+.form-title, .form-label {
+  display: block;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 400;
+}
+
+.form-title {
+  font-size: 18px;
+  background-color: #004c67;
+  color: #ecf0f1;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.form-label {
+  font-size: 14px;
+  color: #004c67;
+  text-align: left;
+}
+
+.input {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  background-color: #ecf0f1;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #004c67;
+}
+
+.form-input {
+  display: block;
+  background-color: transparent;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #004c67;
+  width: 100%;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.copyright {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.site-header {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.site-logo {
+  height: 50px;
+}
+
+.account-controls {
+  align-self: center;
+  margin-left: auto;
+}
+
+.welcome-message {
+  display: block;
+  padding: 20px 0;
+}
+
+.button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 10px 20px;
+  background-color: #004c67;
+  color: #ecf0f1;
+  border: 1px solid #ecf0f1;
+  transition-duration: .2s;
+  transition-property: background-color;
+  text-decoration: none;
+}
+
+.login-button, .sign-up-button, .logout-button, .profile-button {
+  background-color: transparent;
+  color: #2c3e50;
+  margin: 0 5px 0 5px;
+  border: 1px solid #2c3e50;
+}
+
+.login-button:hover, .sign-up-button:hover, .logout-button:hover, .profile-button:hover {
+  color: #ecf0f1;
+}
+
+.form-button {
+  padding: 15px 0;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+}
+
+.topic-button {
+  position: relative;
+  bottom: 0;
+  margin: 10px;
+  margin-top: 92px;
+}
+
+.back-button {
+  margin: 16px;
+}
+
+.info-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  padding: 3px 7px;
+  font-size: 18px;
+}
+
+.info-button i {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.button, input[type=submit] {
+  cursor: pointer;
+}
+
+.button:hover, input[type=submit]:hover {
+  background-color: #00729a;
+}
+
+.test-title {
+  margin: 20px 0;
+}
+
+.question-title {
+  margin: 10px 0;
+}
+
+.test-progress {
+  display: block;
+  position: relative;
+  background-color: #ecf0f1;
+  margin: 10px 0;
+  border: 1px solid #004c67;
+  width: 100%;
+  height: 40px;
+}
+
+.test-progress-text {
+  position: relative;
+}
+
+.test-progress-bar {
+  position: absolute;
+  background-color: #27ae60;
+  width: 0px;
+  height: 100%;
+  z-index: 1;
+}
+
+.binaryTerm, .operator {
+  display: inline;
+  font-size: 18px;
+}
+
+.test-button {
+  display: block;
+  margin: 10px 0;
+}
+
+@keyframes arrow {
+  0% {
+    left: 160px;
+  }
+  10% {
+    left: 160px;
+  }
+  20% {
+    left: 240px;
+  }
+  30% {
+    left: 320px;
+  }
+  40% {
+    left: 400px;
+  }
+  50% {
+    left: 480px;
+  }
+  60% {
+    left: 560px;
+  }
+  70% {
+    left: 640px;
+  }
+  80% {
+    left: 720px;
+  }
+  90% {
+    left: 800px;
+  }
+  100% {
+    left: 800px;
+  }
+}
+
+.table, .table-no-nth {
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #2c3e50;
+  margin-left: auto;
+  border-collapse: collapse;
+}
+
+.table th, .table-no-nth th {
+  font-weight: 900;
+}
+
+.table td, .table-no-nth td {
+  width: 80px;
+}
+
+.table th, .table td, .table-no-nth th, .table-no-nth td {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.table tr:nth-child(odd) {
+  background-color: #004c67;
+  color: #ecf0f1;
+}
+
+.table td {
+  width: 60px;
+}
+
+.blue-cell {
+  background-color: #004c67;
+  color: #ecf0f1;
+  width: 160px;
+}
+
+.arrow-container {
+  position: relative;
+  left: 160px;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 80px;
+  display: none;
+}
+
+.arrow-pointer {
+  display: block;
+  margin: 0 auto;
+  width: 20px;
+}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="topic-header clearfix">
+  <h1 class="topic-title floatLeft"> Binary </h1>
+  <a href="/" class="back-button button floatRight"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to home </a>
+</div>
+
+<h2> What is Binary? </h2>
+<p> Binary is a numbering system which is fundamental to all digital and computer based systems. A binary number can only be 0 or 1 and works on powers of two.</p>
+
+<hr>
+
+<h2>Decimal to Binary Conversion</h2>
+
+<p> Converting the decimal number 134 into binary </p>
+
+<h2> Enter a decimal number (0-512): </h2>
+<input type="number" id="decimalInputBox" class="input" placeholder="e.g 290">
+<button class="button" name="submitDecimal" onclick="decimalToBinary()"> Convert </button>
+
+<div class="arrow-container">
+  <p class="decimal-to-binary-example"> <span class="decimal-number"> 134 </span> <span class="conversion-step"> &#40;-128&#41; </span> </p>
+  <img alt="" src="{{ url_for('static', filename='img/down-arrow.png')}}" class="arrow-pointer"/>
+</div>
+<table class="table-no-nth">
+  <tr>
+    <th class="blue-cell"> Decimal Value </td>
+    <td> 256 </td>
+    <td> 128 </td>
+    <td> 64 </td>
+    <td> 32 </td>
+    <td> 16 </td>
+    <td> 8 </td>
+    <td> 4 </td>
+    <td> 2 </td>
+    <td> 1 </td>
+  </tr>
+  <tr>
+    <th class="blue-cell"> Binary Value </td>
+    <td id="bin-9"> 0 </td>
+    <td id="bin-8"> 0 </td>
+    <td id="bin-7"> 0 </td>
+    <td id="bin-6"> 0 </td>
+    <td id="bin-5"> 0 </td>
+    <td id="bin-4"> 0 </td>
+    <td id="bin-3"> 0 </td>
+    <td id="bin-2"> 0 </td>
+    <td id="bin-1"> 0 </td>
+  </tr>
+</table>
+
+{% endblock %}
+{% block addScripts %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/decimal-binary-example.js')}}"></script>
+{% endblock %}

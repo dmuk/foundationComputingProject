@@ -1,0 +1,53 @@
+.button
+  font-family: $general-font
+  font-size: 14px
+  font-weight: 300
+  padding: 10px 20px
+  background-color: $uea-color
+  color: $white
+  border: 1px solid $white
+  transition-duration: .2s
+  transition-property: background-color
+  text-decoration: none
+
+.login-button, .sign-up-button, .logout-button, .profile-button
+  background-color: transparent
+  color: $black
+  margin: 0 5px 0 5px
+  border: 1px solid $black
+
+  &:hover
+    color: $white
+
+.form-button
+  padding: 15px 0
+  margin: 10px 0
+  border: none
+  width: 100%
+
+.topic-button
+  position: relative
+  bottom: 0
+  margin: 10px
+  margin-top: 92px
+
+.back-button
+  margin: 16px
+
+.info-button
+  position: absolute
+  top: 0
+  right: 0
+  margin: 10px
+  padding: 3px 7px
+  font-size: 18px
+  i
+    padding: 0
+    margin: 0
+    display: inline-block
+
+// Global Button Hover
+.button, input[type=submit]
+    cursor: pointer
+    &:hover
+        background-color: lighten($uea-color, 10%)

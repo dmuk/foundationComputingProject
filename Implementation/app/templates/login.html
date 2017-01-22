@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="/" class="back-button button floatRight"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to home </a>
+<!-- Login Module -->
+<div class="login">
+  <h2 class="form-title"> Login </h2>
+  <form id="login-form" name="login" method="POST">
+    {{ loginForm.hidden_tag() }}
+    <p id="ajax"></p>
+    {{ loginForm.lusername.label(class_="form-label") }}
+    {% if loginForm.lusername.errors %}
+    {% for error in loginForm.lusername.errors %}
+      <p class="form-errors"> {{ error }} </p>
+    {% endfor %}
+    {% endif %}
+    {{ loginForm.lusername(size=80, class_="input form-input") }}
+    {{ loginForm.lpassword.label(class_="form-label") }}
+    {% if loginForm.lpassword.errors %}
+    {% for error in loginForm.lpassword.errors %}
+      <p class="form-errors"> {{ error }} </p>
+    {% endfor %}
+    {% endif %}
+    {{ loginForm.lpassword(size=80, class_="input form-input") }}
+    {{ loginForm.submit(class_="button form-button") }}
+  </form>
+</div>
+{% endblock %}

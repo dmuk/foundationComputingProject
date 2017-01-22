@@ -1,0 +1,51 @@
+.table, .table-no-nth
+  display: inline-block
+  font-family: $general-font
+  font-size: 14px
+  color: $black
+  margin-left: auto
+  border-collapse: collapse
+
+  th
+    font-weight: 900
+
+  td
+    width: 80px
+
+  th, td
+    padding: 10px 15px
+    border: 1px solid #ddd
+    text-align: center
+
+.table
+  tr:nth-child(odd)
+    background-color: $uea-color
+    color: $white
+
+  td
+    width: 60px
+
+.blue-cell
+  background-color: $uea-color
+  color: $white
+  width: 160px
+
+//Binary Example Arrow
+.arrow-container
+  // animation-delay: 2s
+  // animation-duration: 10s
+  // animation-iteration-count: infinite
+  // animation-name: arrow
+  position: relative
+  left: 160px
+  margin-bottom: 5px
+  // border: 1px solid black
+  text-align: center
+  width: 80px
+  display: none
+
+.arrow-pointer
+  display: block
+  margin: 0 auto
+  // border: 1px solid black
+  width: 20px

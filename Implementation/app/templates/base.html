@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ page }} - Foundations of Computing</title>
+  <meta name="description" content="An app for students to learn and practice a variety of topics that make up the foundations of computing."
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Oxygen:300,400,700" rel="stylesheet">
+  <script src="https://use.fontawesome.com/e1b3c5d275.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+  <!-- Site Header -->
+    <div class="container">
+      <div class="site-header">
+        <img class="site-logo" src="{{ url_for('static', filename='img/uea-logo-blue.png') }}">
+        <a href="/" class="site-title"> Foundation Computing </a>
+        <div class="account-controls">
+          {% if current_user.is_authenticated %}
+            <a class="profile-button button" href="{{ url_for('profile') }}"> <i class="fa fa-user" aria-hidden="true"></i> {{ current_user.username|capitalize }}&#39;s Account </a>
+            <a class="logout-button button" href="{{ url_for('logout') }}"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a>
+          {% else %}
+          <a href="login" class="login-button button"> <i class="fa fa-sign-in" aria-hidden="true"></i> Login </a>
+          <a href="sign-up" class="sign-up-button button"> <i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+  <div class="wrapper">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li class="flash-message">{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <hr>
+    {% if current_user.is_authenticated %}
+      <h1 class="welcome-message"> Welcome, {{ current_user.username }} </h1>
+    {% endif %}
+    {% block content %}
+    {% endblock %}
+
+    <hr>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p class="copyright"> &copy; Danny Murphy (CMP)
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.1.1.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-ui.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/validate.js')}}"></script>
+{% block addScripts %}
+{% endblock %}
+</html>

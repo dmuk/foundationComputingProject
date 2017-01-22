@@ -1,0 +1,119 @@
+*, *:before, *::after
+  box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -ms-box-sizing: border-box
+
+html
+  width: 100.01%
+
+body
+  font-size: 62.5%
+  background-image: url('../img/whitediamond.png')
+  background-repeat: repeat
+  padding: 0
+  margin: 0
+  line-height: 1.4
+  min-height: 100vh
+  //To work with ems instead of px
+
+.container, .wrapper
+  margin: 0 auto
+  width: 960px
+
+hr
+  border: 0
+  border-top: 1px solid rgba(0, 0, 0, 0.1)
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+  height: 0
+
+i
+  margin-right: 10px
+
+/**************************
+  DEBUG/UTILITY
+/**************************/
+.width100
+  width: 100%
+.width75
+  width: 75%
+.width50
+  width: 50%
+.floatLeft
+  float: left
+.floatRight
+  float: right
+.alignLeft
+  text-align: left
+.alignRight
+  text-align: right
+
+.clearfix:after
+   content: " "
+   display: block
+   clear: both
+   height: 0
+   visibility: hidden
+
+/**************************
+  TO SORT
+/**************************/
+.logic-gate-showcase
+  display: flex
+  flex-direction: row
+  margin: 20px 0
+  width: 100%
+
+.gate-info
+  padding: 10px
+  padding-left: 20px
+  border-left: 1px solid rgba(0,0,0,0.1)
+  width: 80%
+  // border: 1px solid $black
+
+.logic-gate-img
+  width: 100px
+
+.button-grid
+  display: flex
+  flex-wrap: wrap
+  width: 20%
+
+.btn
+  display: inline-block
+  font-family: $general-font
+  font-size: 12px
+  font-weight: 300
+  background-color: $uea-color
+  color: $white
+  cursor: pointer
+  padding: 10px 20px
+  margin: 10px 10px 10px 0
+  border: 1px solid $black
+  width: 80px
+  transition-duration: .2s
+  transition-property: background-color, scale
+
+  &:hover
+    background-color: lighten($uea-color, 10%)
+    transform: scale(1.05)
+
+.topic-grid
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+
+  .topic:nth-child(even)
+    margin-left: auto
+
+.topic
+  position: relative
+  background-color: $uea-color
+  margin: 20px 0
+  width: 48%
+  height: 200px
+
+.topic-header
+  background-color: $uea-color
+  width: 100%
+  margin-bottom: 20px

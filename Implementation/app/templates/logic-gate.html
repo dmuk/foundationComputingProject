@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="topic-header clearfix">
+    <h1 class="topic-title floatLeft"> Logic Gates </h1>
+    <a href="/" class="back-button button floatRight"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to home </a>
+  </div>
+  <div class="logic-gate-showcase">
+    <div class="button-grid">
+      <button data-name="and" class="btn"> AND </button>
+      <button data-name="or" class="btn"> OR </button>
+      <button data-name="xor" class="btn"> XOR </button>
+      <button data-name="not" class="btn"> NOT </button>
+      <button data-name="nand" class="btn"> NAND </button>
+      <button data-name="nor" class="btn"> NOR </button>
+      <button data-name="xnor" class="btn"> XNOR </button>
+    </div>
+    <div id="loadIn" class="gate-info">
+        <h2 class="topic-subtitle"> {{ data.logicGates[0].name }} </h2>
+        <hr>
+        <p class="topic-paragraph paragraph">
+            {{ data.logicGates[0].desc }}
+        </p>
+        <p> {{ data.logicGates[0].rows }} </p>
+        <table class="table">
+          <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A.B</th>
+          </tr>
+          {% for row in data.logicGates[0].tableData %}
+            <tr>
+              <td>{{ row.A }}</td>
+              <td>{{ row.B }}</td>
+              <td>{{ row.AB }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+    </div>
+  </div>
+{% endblock %}
+{% block addScripts %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/json-loader.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/sorting.js')}}"></script>
+{% endblock %}

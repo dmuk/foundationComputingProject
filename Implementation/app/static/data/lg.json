@@ -1,0 +1,103 @@
+{"logicGates":[
+  { "name": "AND",
+    "desc": "The AND gate is an electronic circuit that gives a high output (1) only if all its inputs are high.  A dot (.) is used to show the AND operation i.e. A.B.  Bear in mind that this dot is sometimes omitted i.e. AB",
+    "tableData": [
+        {
+            "A": 0,
+            "B": 0,
+            "AB": 0
+        },
+        {
+            "A": 0,
+            "B": 1,
+            "AB": 0
+        },
+        {
+            "A": 1,
+            "B": 0,
+            "AB": 0
+        },
+        {
+            "A": 1,
+            "B": 1,
+            "AB": 1
+        }
+    ]
+  },
+  { "name": "OR",
+    "desc": "The OR gate is an electronic circuit that gives a high output (1) if one or more of its inputs are high.  A plus (+) is used to show the OR operation.",
+    "tableData": [
+        {
+            "A": 0,
+            "B": 0,
+            "AB": 0
+        },
+        {
+            "A": 0,
+            "B": 1,
+            "AB": 1
+        },
+        {
+            "A": 1,
+            "B": 0,
+            "AB": 1
+        },
+        {
+            "A": 1,
+            "B": 1,
+            "AB": 1
+        }
+    ]
+
+  },
+  { "name": "NAND",
+    "desc": "This is a NOT-AND gate which is equal to an AND gate followed by a NOT gate.  The outputs of all NAND gates are high if any of the inputs are low. The symbol is an AND gate with a small circle on the output. The small circle represents inversion.",
+    "tableData": [
+        {
+            "A": 0,
+            "B": 0,
+            "AB": 1
+        },
+        {
+            "A": 0,
+            "B": 1,
+            "AB": 1
+        },
+        {
+            "A": 1,
+            "B": 0,
+            "AB": 1
+        },
+        {
+            "A": 1,
+            "B": 1,
+            "AB": 0
+        }
+    ]
+  },
+  { "name": "NOR",
+    "desc": "This is a NOT-OR gate which is equal to an OR gate followed by a NOT gate.  The outputs of all NOR gates are low if any of the inputs are high. The symbol is an OR gate with a small circle on the output. The small circle represents inversion.",
+    "tableData": [
+        {
+            "A": 0,
+            "B": 0,
+            "AB": 1
+        },
+        {
+            "A": 0,
+            "B": 1,
+            "AB": 0
+        },
+        {
+            "A": 1,
+            "B": 0,
+            "AB": 0
+        },
+        {
+            "A": 1,
+            "B": 1,
+            "AB": 0
+        }
+    ]
+  }
+]}

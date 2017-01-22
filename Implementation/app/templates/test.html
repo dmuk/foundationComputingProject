@@ -1,0 +1,20 @@
+<h2 class="topic-subtitle"> {{ data.logicGates[0].name }} </h2>
+<hr>
+<p class="topic-paragraph paragraph">
+    {{ data.logicGates[0].desc }}
+</p>
+<p> {{ data.logicGates[0].rows }} </p>
+<table class="table">
+  <tr>
+    <th>A</th>
+    <th>B</th>
+    <th>A.B</th>
+  </tr>
+  {% for row in data.logicGates[0].tableData %}
+    <tr>
+      <td>{{ row.A }}</td>
+      <td>{{ row.B }}</td>
+      <td>{{ row.AB }}</td>
+    </tr>
+  {% endfor %}
+</table>

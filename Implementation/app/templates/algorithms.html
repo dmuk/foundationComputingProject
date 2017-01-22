@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="topic-header clearfix" onload="sort()">
+  <h1 class="topic-title floatLeft"> Algorithms </h1>
+  <a href="/" class="back-button button floatRight"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to home </a>
+</div>
+<button onclick="sort()"> Press </button>
+<canvas id="sortingCanvas" width="960px" height="500px" style="border:1px solid #000; background-color: #fff;">
+</canvas>
+{% endblock %}
+{% block addScripts %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/sorting.js')}}"></script>
+{% endblock %}

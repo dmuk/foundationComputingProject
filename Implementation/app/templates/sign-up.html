@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="/" class="back-button button floatRight"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to home </a>
+<!-- Sign Up Module -->
+<div class="sign-up">
+  <h2 class="form-title"> Sign Up </h2>
+  <form id="sign-up-form" name="sign-up" method="POST">
+    {{ signUpForm.hidden_tag() }}
+    {{ signUpForm.rusername.label(class_="form-label") }}
+    {% if signUpForm.rusername.errors %}
+    {% for error in signUpForm.rusername.errors %}
+      <p class="form-errors"> {{ error }} </p>
+    {% endfor %}
+    {% endif %}
+    {{ signUpForm.rusername(size=80, class_="input form-input", autofocus=true) }}
+    {{ signUpForm.remail.label(class_="form-label") }}
+    {% if signUpForm.remail.errors %}
+    {% for error in signUpForm.remail.errors %}
+      <p class="form-errors"> {{ error }} </p>
+    {% endfor %}
+    {% endif %}
+    {{ signUpForm.remail(size=80, class_="input form-input") }}
+    {{ signUpForm.rpassword.label(class_="form-label") }}
+    {% if signUpForm.rpassword.errors %}
+    {% for error in signUpForm.rpassword.errors %}
+      <p class="form-errors"> {{ error }} </p>
+    {% endfor %}
+    {% endif %}
+    {{ signUpForm.rpassword(size=80, class_="input form-input") }}
+    {{ signUpForm.rconfirmpass.label(class_="form-label") }}
+    {% if signUpForm.rconfirmpass.errors %}
+    {% for error in signUpForm.rconfirmpass.errors %}
+      <p class="form-errors"> {{ error }} </p>
+    {% endfor %}
+    {% endif %}
+    {{ signUpForm.rconfirmpass(size=80, class_="input form-input") }}
+    {{ signUpForm.submit2(class_="form-button button") }}
+  </form>
+</div>
+
+{% endblock %}
