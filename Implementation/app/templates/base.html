@@ -4,6 +4,8 @@
   <title>{{ page }} - Foundations of Computing</title>
   <meta name="description" content="An app for students to learn and practice a variety of topics that make up the foundations of computing."
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/icon/favicon.ico') }}">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Oxygen:300,400,700" rel="stylesheet">
   <script src="https://use.fontawesome.com/e1b3c5d275.js"></script>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
@@ -37,9 +39,9 @@
       {% endif %}
     {% endwith %}
     <hr>
-    {% if current_user.is_authenticated %}
+    <!-- {% if current_user.is_authenticated %}
       <h1 class="welcome-message"> Welcome, {{ current_user.username }} </h1>
-    {% endif %}
+    {% endif %} -->
     {% block content %}
     {% endblock %}
 

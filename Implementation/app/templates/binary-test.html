@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-
 <div class="topic-header clearfix">
   <h1 class="topic-title floatLeft"> Binary Test </h1>
   <a href="/" class="back-button button floatRight"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to home </a>
@@ -9,12 +8,15 @@
 <div class="test-progress">
   <div class="test-progress-bar"></div>
 </div>
-<h2 class="question-title"> Question 1 </h2>
-<hr>
-<p id="binNum1" class="binaryTerm"> 1001 </p> <p id="operator" class="operator"> + </p> <p id="binNum2" class="binaryTerm"> 1010 </p> <p class="operator"> = </p>
-<input type="text" class="answer-box">
-<button onclick="nextQuestion()" class="button test-button"> Next Question </button>
 
+<h2 class="question-title"> Question <span id="quNum">1</span> </h2>
+<hr>
+<div class="question-container">
+  <p id="binNum1" class="binaryTerm"> 1001 </p> <p id="operator" class="operator"> + </p> <p id="binNum2" class="binaryTerm"> 1010 </p> <p class="operator"> = </p>
+  <input type="text" id="binAnswer" class="input answer-box">
+</div>
+<button onclick="nextQuestion()" class="button test-button"> Next Question </button>
+<button onclick="submit" class="button test-button floatRight"> Submit </button>
 {% endblock %}
 {% block addScripts %}
 <script type="text/javascript" src="{{ url_for('static', filename='js/binary-test.js')}}"></script>
